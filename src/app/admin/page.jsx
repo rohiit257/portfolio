@@ -8,44 +8,42 @@ const Page = () => {
   const [messages, setMessages] = useState([]);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
+  // Handles successful authentication
   const handleAuthSuccess = () => {
-    setIsAuthenticated(true); // Update authentication status
+    setIsAuthenticated(true);
   };
 
-  useEffect(()=>{
-    async function fetchMessages() {
-      try {
-        const response = await axios.get('/api/get_message'); // Correct endpoint for fetching messages
-        console.log(response);
-        
-        setMessages(response.data);
-      } catch (error) {
-        console.error(error);
-      }
-    }
-  })
-  
-
-  async function handleDelete(id) {
+  // Function to fetch messages from the API
+  const fetchMessages = async () => {
     try {
-      await axios.delete(`/api/delete_message/${id}`);
-      // Fetch the updated list of messages
-      fetchMessages();
+      const response = await axios.get('/api/get_message'); // Correct endpoint for fetching messages
+      setMessages(response.data); // Set the messages state with the fetched data
     } catch (error) {
-      console.error(error);
+      console.error('Error fetching messages:', error);
     }
-  }
+  };
 
+  // Function to delete a message
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(`/api/delete_message/${id}`); // Call API to delete the message
+      fetchMessages(); // Refetch messages after deletion
+    } catch (error) {
+      console.error('Error deleting message:', error);
+    }
+  };
+
+  // useEffect to run fetchMessages when the page loads and when the user is authenticated
   useEffect(() => {
     if (isAuthenticated) {
-      fetchMessages();
+      fetchMessages(); // Fetch messages if the user is authenticated
     }
-  }, [isAuthenticated]);
+  }, [isAuthenticated]); // Runs when authentication status changes
 
   return (
     <>
       {!isAuthenticated ? (
-        <Auth onSuccess={handleAuthSuccess} /> // Show authentication component
+        <Auth onSuccess={handleAuthSuccess} /> // Show authentication component if not authenticated
       ) : (
         <>
           <NavbarDemo />
@@ -130,6 +128,6 @@ const Page = () => {
       )}
     </>
   );
-}
+};
 
 export default Page;
