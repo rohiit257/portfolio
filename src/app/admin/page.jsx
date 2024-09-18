@@ -12,14 +12,19 @@ const Page = () => {
     setIsAuthenticated(true); // Update authentication status
   };
 
-  async function fetchMessages() {
-    try {
-      const response = await axios.get('/api/get_message'); // Correct endpoint for fetching messages
-      setMessages(response.data);
-    } catch (error) {
-      console.error(error);
+  useEffect(()=>{
+    async function fetchMessages() {
+      try {
+        const response = await axios.get('/api/get_message'); // Correct endpoint for fetching messages
+        console.log(response);
+        
+        setMessages(response.data);
+      } catch (error) {
+        console.error(error);
+      }
     }
-  }
+  })
+  
 
   async function handleDelete(id) {
     try {
