@@ -32,8 +32,7 @@ export function TimelineDemo() {
         <div>
           <p
             className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Pursuing B.Tech in Computer Engineering at Vivekanand Education Society's Institute of Technology (VESIT). During my academic journey, I've actively engaged in projects and hackathons, focusing on blockchain development, AI, and web development. 
-          </p>
+            Pursuing B.Tech in Computer Engineering at Vivekanand Education Society&apos;s Institute of Technology (VESIT). During my academic journey, I&apos;ve actively engaged in projects and hackathons, focusing on blockchain development, AI, and web development.          </p>
           <p
             className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
             Highlights:
