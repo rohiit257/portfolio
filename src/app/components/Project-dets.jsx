@@ -3,7 +3,30 @@ import React from "react";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import { TracingBeam } from "../components/ui/tracing-beam";
-import { SiReact, SiNodedotjs, SiMongodb, SiExpress, SiPython, SiDjango, SiNextdotjs, SiSolidity, SiEthereum, SiTailwindcss, SiAlchemy, SiOpenzeppelin, SiIpfs, SiLangchain, SiGooglegemini, SiHuggingface, SiStreamlit, SiBootstrap, SiJavascript, SiJquery, SiPandas, SiJsonwebtokens } from "react-icons/si";
+import {
+  SiReact,
+  SiNodedotjs,
+  SiMongodb,
+  SiExpress,
+  SiPython,
+  SiDjango,
+  SiNextdotjs,
+  SiSolidity,
+  SiEthereum,
+  SiTailwindcss,
+  SiAlchemy,
+  SiOpenzeppelin,
+  SiIpfs,
+  SiLangchain,
+  SiGooglegemini,
+  SiHuggingface,
+  SiStreamlit,
+  SiBootstrap,
+  SiJavascript,
+  SiJquery,
+  SiPandas,
+  SiJsonwebtokens,
+} from "react-icons/si";
 
 export function TracingBeamDemo() {
   return (
@@ -11,31 +34,31 @@ export function TracingBeamDemo() {
       <div className="max-w-2xl mx-auto antialiased pt-4 relative">
         {dummyContent.map((item, index) => (
           <div key={`content-${index}`} className="mb-12">
-            <h2 className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
+            <h2 className="bg-black text-neutral-200 rounded-full text-sm w-fit px-4 py-1 mb-4">
               {item.badge}
             </h2>
 
             <p className="text-xl mb-6 font-semibold">{item.title}</p>
 
             {item.techStackIcons && (
-              <div className="flex gap-4 mb-6 text-4xl">
+              <div className="flex gap-4 mb-6 text-4xl text-neutral-200">
                 {item.techStackIcons.map((Icon, iconIndex) => (
-                  <Icon key={iconIndex}  />
+                  <Icon key={iconIndex} />
                 ))}
               </div>
             )}
 
-            <div className="text-base lg:text-lg leading-relaxed prose dark:prose-invert">
+            <div className="text-base md:text-md leading-relaxed prose dark:prose-invert">
               {item?.image && (
                 <Image
                   src={item.image}
-                  alt="blog thumbnail"
+                  alt="projects"
                   height="1000"
                   width="1000"
                   className="rounded-lg mb-10 object-cover"
                 />
               )}
-              <div className="text-slate-200">{item.description}</div>
+              <div className="text-neutral-200">{item.description}</div>
             </div>
           </div>
         ))}
@@ -47,32 +70,71 @@ export function TracingBeamDemo() {
 const dummyContent = [
   {
     title: "MetaBazaar NFT Marketplace",
-    techStackIcons: [SiSolidity, SiNextdotjs, SiIpfs, SiEthereum, SiAlchemy, SiOpenzeppelin, SiMongodb, SiTailwindcss],
+    techStackIcons: [
+      SiSolidity,
+      SiNextdotjs,
+      SiIpfs,
+      SiEthereum,
+      SiAlchemy,
+      SiOpenzeppelin,
+      SiMongodb,
+      SiTailwindcss,
+    ],
     description: (
       <>
         <p>
-          Sit duis est minim proident non nisi velit non consectetur. Esse
-          adipisicing laboris consectetur enim ipsum reprehenderit eu deserunt
-          Lorem ut aliqua anim do. Duis cupidatat qui irure cupidatat incididunt
-          incididunt enim magna id est qui sunt fugiat. Laboris do duis pariatur
-          fugiat Lorem aute sit ullamco. Qui deserunt non reprehenderit dolore
-          nisi velit exercitation Lorem qui do enim culpa. Aliqua eiusmod in
-          occaecat reprehenderit laborum nostrud fugiat voluptate do Lorem culpa
-          officia sint labore. Tempor consectetur excepteur ut fugiat veniam
-          commodo et labore dolore commodo pariatur.
+          MetaBazaar is an advanced NFT marketplace built on the Ethereum
+          blockchain, leveraging smart contracts written in Solidity and
+          deployed using Hardhat. It is designed to offer users a platform to
+          mint, buy, sell, and list NFTs. MetaBazaar integrates with IPFS using
+          Pinata to store digital assets securely and provides users with wallet
+          connect functionality via MetaMask. The marketplace features a modern
+          user interface built with Next.js and styled with Tailwind CSS,
+          delivering a seamless experience for NFT enthusiasts.
         </p>
+        <br />
         <p>
-          Dolor minim irure ut Lorem proident. Ipsum do pariatur est ad ad
-          veniam in commodo id reprehenderit adipisicing. Proident duis
-          exercitation ad quis ex cupidatat cupidatat occaecat adipisicing.
+          Buy, Sell, and Mint NFTs: Users can mint, buy, and sell NFTs
+          seamlessly through the platform.
+          <br />
+          User Profiles: Each user has a
+          profile displaying their owned NFTs and transaction history.
+          <br />
+           Admin
+          Dashboard: A restricted dashboard only accessible to the marketplace
+          owner, allowing management of marketplace settings like listing and
+          royalty fees. 
+          <br />
+          Royalties for Creators: Creators earn royalties from
+          secondary sales of their NFTs. 
+          <br />
+          NFT Reviews and Ratings: Users can
+          review and rate NFTs, enhancing community engagement. 
+          <br />
+          Leaderboards:
+          Displays top NFTs and creators based on various metrics. 
+          <br />
+          WalletConnect
+          Integration: Supports MetaMask for easy wallet connections.
+          <br />
+          Discussion/Forum Section: A dedicated space for users to discuss and
+          ask questions about NFTs. 
+          <br />
+          Sorting and Filtering: Robust sorting and
+          filtering options to navigate NFT listings easily. 
+          <br />
+          Search
+          Functionality: Users can search for NFTs by keyword.
+          <br />
+          Marketplace
+          Views: NFTs can be viewed in both tabular and card layouts, offering
+          flexibility in how users browse the marketplace. 
+          <br />
+          Future Enhancements:
+          Ongoing development to introduce more features like cross-chain
+          compatibility, advanced analytics, and community voting.
         </p>
-        <p>
-          Tempor quis dolor veniam quis dolor. Sit reprehenderit eiusmod
-          reprehenderit deserunt amet laborum consequat adipisicing officia qui
-          irure id sint adipisicing. Adipisicing fugiat aliqua nulla nostrud.
-          Amet culpa officia aliquip deserunt veniam deserunt officia
-          adipisicing aliquip proident officia sunt.
-        </p>
+       
       </>
     ),
     badge: "BlockChain",
@@ -81,7 +143,13 @@ const dummyContent = [
   },
   {
     title: "RAG: AI-Powered CSE Subject Bot",
-    techStackIcons: [SiPython, SiLangchain, SiGooglegemini, SiHuggingface, SiStreamlit],
+    techStackIcons: [
+      SiPython,
+      SiLangchain,
+      SiGooglegemini,
+      SiHuggingface,
+      SiStreamlit,
+    ],
     description: (
       <>
         <p>
@@ -97,42 +165,40 @@ const dummyContent = [
         <p>
           <b>Features: </b>
           <br />
-          Pre-fed PDFs: The bot is equipped with knowledge derived
-          from a collection of PDFs covering crucial theoretical Computer
-          Science topics including Database Management Systems (DBMS), Computer
-          Networks (CN), Operating Systems (OS), Blockchain, and Object-Oriented
+          Pre-fed PDFs: The bot is equipped with knowledge derived from a
+          collection of PDFs covering crucial theoretical Computer Science
+          topics including Database Management Systems (DBMS), Computer Networks
+          (CN), Operating Systems (OS), Blockchain, and Object-Oriented
           Programming (OOP). These documents are processed to create a
-          comprehensive knowledge base for the chatbot. 
+          comprehensive knowledge base for the chatbot.
           <br />
-          LangChain Integration:
-          LangChain is utilized to generate contextually relevant prompts and
-          responses, enhancing the chatbot’s ability to understand and answer
-          user queries effectively. It helps in translating user questions into
-          actionable prompts for the AI. 
+          LangChain Integration: LangChain is utilized to generate contextually
+          relevant prompts and responses, enhancing the chatbot’s ability to
+          understand and answer user queries effectively. It helps in
+          translating user questions into actionable prompts for the AI.
           <br />
-          Gemini AI: Powered by Google Gemini AI,
-          the bot generates sophisticated and context-aware answers. Gemini AI’s
-          capabilities ensure that the responses are not only accurate but also
-          relevant to the specific questions asked by users.
+          Gemini AI: Powered by Google Gemini AI, the bot generates
+          sophisticated and context-aware answers. Gemini AI’s capabilities
+          ensure that the responses are not only accurate but also relevant to
+          the specific questions asked by users.
           <br />
-          ChromaDB: ChromaDB
-          is employed as a vector store for storing and retrieving document
-          embeddings. It enables the bot to access and interpret the embedded
-          data efficiently, facilitating precise and contextually appropriate
-          responses to user queries. 
+          ChromaDB: ChromaDB is employed as a vector store for storing and
+          retrieving document embeddings. It enables the bot to access and
+          interpret the embedded data efficiently, facilitating precise and
+          contextually appropriate responses to user queries.
           <br />
-          Two Interfaces: 
+          Two Interfaces:
           <br />
-          Streamlit UI: The
-          Streamlit-based interface (app.py) offers a user-friendly environment
-          where users can interact with the chatbot through a web-based
-          graphical interface. It is designed for ease of use, allowing users to
-          ask questions and receive responses in real-time. 
+          Streamlit UI: The Streamlit-based interface (app.py) offers a
+          user-friendly environment where users can interact with the chatbot
+          through a web-based graphical interface. It is designed for ease of
+          use, allowing users to ask questions and receive responses in
+          real-time.
           <br />
-          CLI Version: The
-          command-line interface (rag.py) provides an alternative way to
-          interact with the chatbot via the terminal. This version is ideal for
-          users who prefer or require a text-based interface.
+          CLI Version: The command-line interface (rag.py) provides an
+          alternative way to interact with the chatbot via the terminal. This
+          version is ideal for users who prefer or require a text-based
+          interface.
         </p>
       </>
     ),
@@ -142,7 +208,14 @@ const dummyContent = [
   },
   {
     title: "ERP: Schedule Management System",
-    techStackIcons: [SiDjango, SiPython, SiBootstrap, SiJavascript, SiJquery, SiPandas],
+    techStackIcons: [
+      SiDjango,
+      SiPython,
+      SiBootstrap,
+      SiJavascript,
+      SiJquery,
+      SiPandas,
+    ],
     description: (
       <>
         <p>
@@ -187,7 +260,14 @@ const dummyContent = [
   },
   {
     title: "Get Me A Job",
-    techStackIcons: [SiExpress, SiNodedotjs, SiReact, SiMongodb, SiJsonwebtokens, SiTailwindcss],
+    techStackIcons: [
+      SiExpress,
+      SiNodedotjs,
+      SiReact,
+      SiMongodb,
+      SiJsonwebtokens,
+      SiTailwindcss,
+    ],
     description: (
       <>
         <p>

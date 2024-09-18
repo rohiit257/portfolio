@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Timeline } from "../components/ui/timeline";
+import { LinkPreview } from "./ui/link-preview";
 
 export function TimelineDemo() {
   const techStacks = [
@@ -32,51 +33,28 @@ export function TimelineDemo() {
         <div>
           <p
             className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Pursuing B.Tech in Computer Engineering at Vivekanand Education Society&apos;s Institute of Technology (VESIT). During my academic journey, I&apos;ve actively engaged in projects and hackathons, focusing on blockchain development, AI, and web development.          </p>
+            Pursuing B.Tech in Computer Engineering at Vivekanand Education Society&apos;s Institute of Technology (VESIT). During my academic journey, I&apos;ve actively engaged in projects and hackathons, focusing on solving real-world problems through technology. 
+          </p>
           <p
             className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
             Highlights:
           </p>
           <ul className="list-disc list-inside mb-4 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal">
-            <li>Developed and launched multiple projects like Aceternity UI and MetaBazaar.</li>
-            <li>Active participation in Smart India Hackathon, representing VESIT with innovative solutions.</li>
-            <li>Explored blockchain technologies, including Hyperledger and Ethereum.</li>
-            <li>Focused on applying AI techniques for education and freelance platforms.</li>
+            <li>Developed and launched multiple projects, with a passion for solving real-world problems.</li>
+            <li>Delivered a lecture on Django to my class during Semester 4, sharing knowledge and fostering collaboration.</li>
+            <li>Explored and worked on a wide range of domains including AI, Machine Learning, Blockchain, Web Development, App Development, IoT, and more.</li>
+            <li>Active participant in hackathons and competitions, constantly seeking innovative solutions for real-world challenges.</li>
           </ul>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src=""
-              alt="project screenshot 1"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]" />
-            <Image
-              src=""
-              alt="project screenshot 2"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]" />
-            <Image
-              src=""
-              alt="project screenshot 3"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]" />
-            <Image
-              src=""
-              alt="project screenshot 4"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]" />
-          </div>
+          <h4><LinkPreview url='https://rohitdebugbugs-portfolio.vercel.app/Projects'>My Projects</LinkPreview></h4>
         </div>
       ),
     },
+    
     {
-      title: "Early 2022",
+      title: "Experiences",
       content: (
         <div>
-          <p
+          {/* <p
             className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
             I usually run out of copy, but when I see content this big, I try to
             integrate lorem ipsum.
@@ -85,7 +63,7 @@ export function TimelineDemo() {
             className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
             Lorem ipsum is for people who are too lazy to write copy. But we are
             not. Here are some more example of beautiful designs I built.
-          </p>
+          </p> */}
           <div className="grid grid-cols-2 gap-4">
             <Image
               src=""
@@ -121,7 +99,7 @@ export function TimelineDemo() {
         <div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {techStacks.map((tech, index) => (
-              <div key={index} className="flex flex-col items-center p-4 bg-zinc-400 dark:bg-zinc-400 rounded-lg shadow-lg">
+              <div key={index} className="flex flex-col items-center border border-zinc-800 p-4 bg-neutral-900 dark:bg-neutral-900 rounded-lg shadow-lg">
                 <Image
                   src={tech.logo}
                   alt={tech.name}
@@ -129,7 +107,7 @@ export function TimelineDemo() {
                   height={60}
                   className="mb-4"
                 />
-                <p className="text-zinc-950 dark:text-zinc-950 text-base font-medium">
+                <p className="text-neutral-300 dark:text-neutral-300 text-base font-medium">
                   {tech.name}
                 </p>
               </div>
