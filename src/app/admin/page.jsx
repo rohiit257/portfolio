@@ -16,7 +16,10 @@ const Page = () => {
   // Function to fetch messages from the API
   const fetchMessages = async () => {
     try {
-      const response = await axios.get('/api/get_message'); // Correct endpoint for fetching messages
+      const response = await axios.get('/api/get_message');
+      console.log('====================================');
+      console.log(response);
+      console.log('===================================='); // Correct endpoint for fetching messages
       setMessages(response.data); // Set the messages state with the fetched data
     } catch (error) {
       console.error('Error fetching messages:', error);
@@ -38,7 +41,7 @@ const Page = () => {
     if (isAuthenticated) {
       fetchMessages(); // Fetch messages if the user is authenticated
     }
-  }, []); // Runs when authentication status changes
+  }, [isAuthenticated],[]); // Runs when authentication status changes
 
   return (
     <>
