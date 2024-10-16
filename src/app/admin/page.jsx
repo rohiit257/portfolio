@@ -41,7 +41,7 @@ const Page = () => {
     if (isAuthenticated) {
       fetchMessages(); // Fetch messages if the user is authenticated
     }
-  }, [isAuthenticated],[]); // Runs when authentication status changes
+  }, [isAuthenticated],[handleDelete]); // Runs when authentication status changes
 
   return (
     <>
