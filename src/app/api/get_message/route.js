@@ -2,7 +2,7 @@ import dbConnect from "@/lib/dbConnect";
 import Messages from "@/models/Messages";
 import { NextResponse } from "next/server";
 
-export async function GET(request) {
+export async function GET() {
     try {
         await dbConnect()
         const messages = await Messages.find().sort({createdAt:-1})

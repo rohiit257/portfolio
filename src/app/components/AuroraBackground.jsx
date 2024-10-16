@@ -42,7 +42,7 @@ export function AuroraBackgroundDemo() {
           >
             <LinkPreview
             className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2"
-            url="https://github.com/rohiit257"
+            url="https://drive.google.com/file/d/1e9nZJ34cu46D3uQbmARXGVEw5TnnOHpR/view?usp=sharing"
             imageSrc=""
             >
                 Resume
